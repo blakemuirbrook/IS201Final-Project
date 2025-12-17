@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blake Muirbrook – Scratch Page</title>
+  <link rel="stylesheet" href="scratch.css">
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="resume.html">Resume</a>
+  <a href="#Top">Top</a>
+  <a href="#Surf">Surf</a>
+  <a href="#Video">Video</a>
+  <a href="#Tableau">Tableau</a>
+  <a href="app.html">App</a>
+</nav>
+
+<div class="section" id="Top">
+  <h1>Scratch Page</h1>
+  <p>
+    This from-scratch page demonstrates HTML, CSS, lists, anchors, an embedded YouTube video,
+    a live Tableau visualization, and navigation to a small AI-assisted web app.
+  </p>
+</div>
+
+<div class="section resume" id="Resume">
+  <h2>Resume (HTML)</h2>
+
+  <div class="resume-header">
+    <img src="Blake.JPG" alt="Blake Muirbrook">
+    <h3>Blake Muirbrook</h3>
+    <p>BYU Marketing • Sales & Account Management</p>
+  </div>
+
+  <div class="card">
+    <h3>Education</h3>
+    <ul>
+      <li>BYU Marriott School of Business — Marketing (GPA 3.45), Grad June 2027</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Experience</h3>
+    <ul>
+      <li>AutoWeb — Account Executive (Mar 2025 – Sep 2025)</li>
+      <li>Airflow Systems — Executive Assistant (Jun 2024 – Aug 2024)</li>
+      <li>Squeeze — Sales Representative (Apr 2024 – Jun 2024)</li>
+      <li>In-N-Out Burger — Crew Member (Aug 2021 – May 2022)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Skills & Languages</h3>
+    <ul>
+      <li>Customer service, sales strategies, teamwork, problem-solving, time management</li>
+      <li>Spanish</li>
+    </ul>
+  </div>
+
+  <p>
+    Full formatted version: <a href="resume.html">Resume Page</a>
+  </p>
+</div>
+
+<div class="section" id="Surf">
+  <h2>El Salvador Surf Spots</h2>
+
+  <!-- Ordered list with an unordered list inside (rubric requirement) -->
+  <ol>
+    <li>Punta Roca
+      <ul>
+        <li>World-class right-hand point break</li>
+        <li>Powerful and competitive</li>
+      </ul>
+    </li>
+    <li>El Sunzal
+      <ul>
+        <li>Long, smooth rides</li>
+        <li>Beginner-friendly waves</li>
+      </ul>
+    </li>
+    <li>Las Flores
+      <ul>
+        <li>Great barrels</li>
+        <li>Best for advanced surfers</li>
+      </ul>
+    </li>
+  </ol>
+</div>
+
+<div class="section" id="Video">
+  <h2>Embedded YouTube Video</h2>
+
+  <div class="video-center">
+    <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/qZYA77yAAdg"
+      title="Surf Video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+<div class="section" id="Tableau">
+  <h2>Interactive Tableau Dashboard</h2>
+
+  <!-- NOTE: This must be a real Public Tableau viz. If this one doesn't load, replace the 'name' value with your viz path -->
+  <div class="tableauPlaceholder" id="viz1" style="position: relative;">
+    <noscript>
+      <a href="https://public.tableau.com/">
+        <img alt="Tableau Visualization" src="https://public.tableau.com/static/images/El/ElSalvadorSurfing/Dashboard1/1_rss.png" style="border:none;">
+      </a>
+    </noscript>
+
+    <object class="tableauViz" style="display:none;">
+      <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F">
+      <param name="embed_code_version" value="3">
+      <param name="name" value="ElSalvadorSurfing/Dashboard1">
+      <param name="tabs" value="no">
+      <param name="toolbar" value="yes">
+    </object>
+  </div>
+
+  <script type="text/javascript">
+    var divElement = document.getElementById("viz1");
+    var vizElement = divElement.getElementsByTagName("object")[0];
+    vizElement.style.width = "100%";
+    vizElement.style.height = "700px";
+    var scriptElement = document.createElement("script");
+    scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
+
+  <p class="app-link">
+    Web app link (rubric): <a href="app.html">Open the AI Web App</a>
+  </p>
+</div>
+
+<p style="text-align:center; margin:40px;">
+  <a href="#Top">Back to Top</a>
+</p>
+
+</body>
+</html>

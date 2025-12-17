@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blake Muirbrook – Page</title>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f0f4f8;
+        color: #023047;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1, h2, h3 {
+        margin-top: 0;
+        color: #023047;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    ul, ol {
+        margin-left: 20px;
+        line-height: 1.7;
+    }
+
+    img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    nav {
+        background-color: #023047;
+        padding: 16px 0;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    nav a {
+        color: #ffb703;
+        margin: 0 16px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        color: #fb8500;
+        text-decoration: underline;
+    }
+
+    .section {
+        background-color: #ffffff;
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 40px;
+        border-radius: 14px;
+        box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+        transform: translateX(-12px);
+    }
+
+    .resume img {
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 12px;
+    }
+
+    .resume-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .card {
+        background-color: #e0f7fa;
+        padding: 20px;
+        margin-bottom: 24px;
+        border-radius: 12px;
+    }
+
+    .video-center {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .riddle-app {
+        border: 2px solid #023047;
+        padding: 30px;
+        border-radius: 12px;
+        background-color: #fffbf0;
+        text-align: center;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-weight: bold;
+        border: none;
+        border-radius: 6px;
+        background-color: #ffb703;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background-color: #fb8500;
+        color: #ffffff;
+    }
+
+    @media (max-width: 768px) {
+        .section {
+            margin: 24px 16px;
+            padding: 28px;
+            transform: none;
+        }
+
+        nav a {
+            margin: 0 10px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#Top">Home</a>
+    <a href="#Top">Top</a>
+    <a href="#Resume">Resume</a>
+    <a href="#Surf">Surf</a>
+    <a href="#Video">Video</a>
+    <a href="#Tableau">Tableau</a>
+   <a href="app.html">App</a>
+</nav>
+
+<div class="section" id="Top">
+    <h1>Blake Muirbrook </h1>
+    <p>
+        This  Webpage demonstrates HTML, CSS, media embedding,
+        a live Tableau visualization, and a small AI-assisted web application.
+    </p>
+</div>
+
+<div class="section resume" id="Resume">
+    <h2>Resume</h2>
+
+    <div class="resume-header">
+        <img src="Blake.JPG" alt="Blake Muirbrook">
+        <h3>Blake Muirbrook</h3>
+        <p>
+            Marketing Associate<br>
+            Delta Team Tactical<br>
+            American Fork, Utah
+        </p>
+    </div>
+
+    <p>
+        <strong>Mission Statement:</strong>
+        My mission is to work with integrity, lead by example,
+        and consistently put forth my best effort while uplifting those around me.
+    </p>
+
+    <div class="card">
+        <h3>Education</h3>
+        <ul>
+            <li>Brigham Young University — BSBS</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Experience</h3>
+        <ul>
+            <li>Marketing Associate</li>
+            <li>Ecommerce Specialist</li>
+            <li>Executive Assistant</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Skills</h3>
+        <ul>
+            <li>Strong communication</li>
+            <li>Market research & consumer insights</li>
+            <li>Strategic planning</li>
+            <li>Digital marketing analytics</li>
+        </ul>
+    </div>
+</div>
+
+<div class="section" id="Surf">
+    <h2>El Salvador: Surfing Capital of the World</h2>
+
+    <ol>
+        <li>Punta Roca
+            <ul>
+                <li>World-class right-hand point break</li>
+                <li>Powerful and competitive</li>
+            </ul>
+        </li>
+        <li>El Sunzal
+            <ul>
+                <li>Long, smooth rides</li>
+                <li>Beginner-friendly waves</li>
+            </ul>
+        </li>
+        <li>Las Flores
+            <ul>
+                <li>Perfect barrel sections</li>
+                <li>Advanced surfers only</li>
+            </ul>
+        </li>
+    </ol>
+</div>
+
+<div class="section" id="Video">
+    <h2>Surf Video Preview</h2>
+
+    <div class="video-center">
+        <a href="https://www.youtube.com/watch?v=qZYA77yAAdg" target="_blank" style="position: relative; display: inline-block;">
+            <img src="https://img.youtube.com/vi/qZYA77yAAdg/hqdefault.jpg" alt="El Salvador Surfing Video" style="max-width:420px;">
+            <span style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:60px; color:white; text-shadow:0 0 10px black;">▶</span>
+        </a>
+    </div>
+
+    <p style="text-align:center; margin-top:14px;">
+        Click the image to watch the full video on YouTube.
+    </p>
+</div>
+
+<div class="section" id="Tableau">
+    <h2>Interactive Tableau Surf Dashboard</h2>
+
+    <div class="tableauPlaceholder" id="viz1765662745777" style="position: relative;">
+        <noscript>
+            <a href="#">
+                <img alt="El Salvador Surfing Dashboard"
+                     src="https://public.tableau.com/static/images/El/ElSalvadorSurfing/Dashboard1/1_rss.png"
+                     style="border: none;">
+            </a>
+        </noscript>
+
+        <object class="tableauViz" style="display:none;">
+            <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F">
+            <param name="embed_code_version" value="3">
+            <param name="name" value="ElSalvadorSurfing/Dashboard1">
+            <param name="tabs" value="no">
+            <param name="toolbar" value="yes">
+        </object>
+    </div>
+
+    <script type="text/javascript">
+        var divElement = document.getElementById("viz1765662745777");
+        var vizElement = divElement.getElementsByTagName("object")[0];
+        vizElement.style.width = "100%";
+        vizElement.style.height = "700px";
+        var scriptElement = document.createElement("script");
+        scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+</div>
+
+<div class="section riddle-app" id="Riddle">
+    <h2>Riddle Generator</h2>
+    <p id="riddle">Click the button to generate a riddle!</p>
+    <button onclick="newRiddle()">New Riddle</button>
+</div>
+
+<script>
+    const riddles = [
+        "I speak without a mouth and hear without ears. What am I? An echo.",
+        "What has keys but can’t open locks? A piano.",
+        "What gets wetter the more it dries? A towel.",
+        "What has a head and a tail but no body? A coin."
+    ];
+
+    function newRiddle() {
+        const i = Math.floor(Math.random() * riddles.length);
+        document.getElementById("riddle").innerText = riddles[i];
+    }
+</script>
+
+<p style="text-align:center; margin:40px;">
+    <a href="#Top">Back to Top</a>
+</p>
+
+</body>
+</html>

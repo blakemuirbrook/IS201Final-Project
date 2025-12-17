@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f4f8;
+  color: #023047;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+  color: #023047;
+}
+
+p { line-height: 1.6; }
+
+ul, ol {
+  margin-left: 20px;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+nav {
+  background-color: #023047;
+  padding: 16px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: #ffb703;
+  margin: 0 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #fb8500;
+  text-decoration: underline;
+}
+
+.section {
+  background-color: #ffffff;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.resume img {
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: #e0f7fa;
+  padding: 20px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+}
+
+.video-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.app-link {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    margin: 24px 16px;
+    padding: 28px;
+  }
+  nav a { margin: 0 10px; }
+}

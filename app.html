@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Riddle Generator App</title>
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f0f4f8;
+      color: #023047;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #023047;
+      padding: 16px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: #ffb703;
+      margin: 0 16px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #fb8500;
+      text-decoration: underline;
+    }
+
+    .wrap {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 16px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+      padding: 34px;
+    }
+
+    .app-header h1 {
+      margin: 0 0 8px;
+    }
+
+    .app-header p {
+      margin: 0 0 22px;
+      color: #335a6b;
+    }
+
+    .riddle-box {
+      background: #fffbf0;
+      border: 2px solid #023047;
+      border-radius: 12px;
+      padding: 22px;
+      margin: 18px 0 14px;
+    }
+
+    #riddle {
+      font-size: 1.2rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .answer {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px dashed rgba(2, 48, 71, 0.35);
+      display: none;
+      color: #023047;
+      font-weight: bold;
+    }
+
+    .controls {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    button {
+      padding: 12px 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      background-color: #ffb703;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+
+    button:hover {
+      background-color: #fb8500;
+      color: #ffffff;
+    }
+
+    .secondary {
+      background: #e0f7fa;
+    }
+
+    .secondary:hover {
+      background: #8ecae6;
+      color: #023047;
+    }
+
+    .small {
+      font-size: 0.95rem;
+      color: #335a6b;
+      margin-top: 16px;
+    }
+
+    .footer-link {
+      text-align: center;
+      margin: 24px 0 60px;
+    }
+
+    @media (max-width: 768px) {
+      .card { padding: 24px; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <!-- Change this href to your actual main page filename if needed -->
+    <a href="content.html">Back to Content Page</a>
+   
+  </nav>
+
+  <div class="wrap" id="Top">
+    <div class="card">
+      <div class="app-header">
+        <h1>Riddle Generator</h1>
+        <p>Generate a riddle, try to solve it, then reveal the answer.</p>
+      </div>
+
+      <div class="riddle-box">
+        <p id="riddle">Click “New Riddle” to begin.</p>
+        <div id="answer" class="answer"></div>
+      </div>
+
+      <div class="controls">
+        <button onclick="newRiddle()">New Riddle</button>
+        <button class="secondary" onclick="toggleAnswer()">Show / Hide Answer</button>
+        <button class="secondary" onclick="copyRiddle()">Copy Riddle</button>
+      </div>
+
+      <p class="small" id="status" aria-live="polite"></p>
+    </div>
+
+    <div class="footer-link">
+      <a href="#Top" style="color:#023047; font-weight:bold; text-decoration:none;">Back to Top</a>
+    </div>
+  </div>
+
+  <script>
+    const riddles = [
+      { q: "I speak without a mouth and hear without ears. What am I?", a: "An echo." },
+      { q: "What has keys but can’t open locks?", a: "A piano." },
+      { q: "What gets wetter the more it dries?", a: "A towel." },
+      { q: "What has a head and a tail but no body?", a: "A coin." },
+      { q: "What can travel around the world while staying in the corner?", a: "A stamp." },
+      { q: "What has hands but can’t clap?", a: "A clock." }
+    ];
+
+    let current = null;
+
+    function newRiddle() {
+      const i = Math.floor(Math.random() * riddles.length);
+      current = riddles[i];
+
+      document.getElementById("riddle").innerText = current.q;
+      document.getElementById("answer").innerText = current.a;
+      document.getElementById("answer").style.display = "none";
+      setStatus("New riddle loaded.");
+    }
+
+    function toggleAnswer() {
+      const ans = document.getElementById("answer");
+      if (!current) {
+        setStatus("Generate a riddle first.");
+        return;
+      }
+      ans.style.display = (ans.style.display === "none" || ans.style.display === "") ? "block" : "none";
+      setStatus(ans.style.display === "block" ? "Answer revealed." : "Answer hidden.");
+    }
+
+    async function copyRiddle() {
+      if (!current) {
+        setStatus("Generate a riddle first.");
+        return;
+      }
+      const text = current.q + " (Answer: " + current.a + ")";
+      try {
+        await navigator.clipboard.writeText(text);
+        setStatus("Copied to clipboard!");
+      } catch (e) {
+        setStatus("Couldn’t copy (browser blocked it). You can manually select the text.");
+      }
+    }
+
+    function setStatus(msg) {
+      document.getElementById("status").innerText = msg;
+    }
+  </script>
+</body>
+</html>
